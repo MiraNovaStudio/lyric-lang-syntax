@@ -33,7 +33,7 @@ From the repository root, with Node.js 20 or later:
 npx @vscode/vsce package
 ```
 
-vsce writes `lyric-lang-<version>.vsix` in the repository root. The filename comes from `name` and `version` in `package.json`. With the current manifest that file is `lyric-lang-0.8.5.vsix`.
+vsce writes `lyric-lang-syntax-<version>.vsix` in the repository root. The filename comes from `name` and `version` in `package.json`. With the current manifest that file is `lyric-lang-syntax-0.8.5.vsix`.
 
 1. Open the Extensions view (`Ctrl+Shift+X` on Windows and Linux, `Cmd+Shift+X` on macOS).
 2. Open the **Views and More Actions...** menu (`⋮`) at the top of the Extensions view.
@@ -43,7 +43,7 @@ vsce writes `lyric-lang-<version>.vsix` in the repository root. The filename com
 From a terminal, with the `code` command on your `PATH`:
 
 ```bash
-code --install-extension lyric-lang-<version>.vsix
+code --install-extension lyric-lang-syntax-<version>.vsix
 ```
 
 To try the extension without packaging, open this folder in VS Code and press **F5**.
