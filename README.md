@@ -1,54 +1,59 @@
 # Lyric Language Support
 
-Official VS Code extension providing syntax highlighting and language configuration for the **Lyric programming language** (`.ly` files).
-
-## Version
-
-0.8.5
+Official VS Code extension for the Lyric programming language. It provides syntax highlighting 
+and editor configuration for `.ly` files.
 
 ## Features
 
-### Syntax Highlighting
+### Syntax highlighting
 
-- **Types & Declarations**: `def`, `class`, `var`, `int`, `flt`, `str`, `god`, `bin`, `rex`, `arr`, `map`, `obj`, `dsk`, `pyobject`
-- **Control Flow**: `if`, `elif`, `else`, `case`, `given`, `for`, `done`, `end`, `try`, `catch`, `finally`, `fade`, `raise`, `import`, `importpy`, `break`, `continue`, `return`, `as`, `in`, `and`, `or`, `not`
-- **Access Modifiers**: `public`, `private`, `protected`
+- **Types and declarations**: `def`, `class`, `var`, `int`, `flt`, `str`, `god`, `bin`, `rex`, `arr`, `map`, `obj`, `dsk`, `pyobject`
+- **Control flow**: `if`, `elif`, `else`, `case`, `given`, `for`, `done`, `end`, `try`, `catch`, `finally`, `fade`, `raise`, `import`, `importpy`, `break`, `continue`, `return`, `as`, `in`, `and`, `or`, `not`
+- **Access modifiers**: `public`, `private`, `protected`
 - **Inheritance**: `based on`
-- **Built-in Functions**: `print`, `input`, `range`, `open`, `type`, `isinstance`, `regex`, `exec`, `getopts`
+- **Built-in functions**: `print`, `input`, `range`, `open`, `type`, `isinstance`, `regex`, `exec`, `getopts`
 - **Constants**: `true`, `false`, `True`, `False`, `None`
-- **Operators**: Arithmetic, comparison, assignment, file I/O (`->`, `->>`, `<-`), and shell chain (`&&`, `||`, `|`)
-- **Class Terminator**: `+++`
+- **Numbers and strings**: numeric literals, single- and double-quoted strings, and escape sequences
+- **Operators**: arithmetic, comparison, assignment, file I/O (`->`, `->>`, `<-`), and shell chain (`&&`, `||`, `|`)
+- **Class terminator**: `+++`
 - **Comments**: `#` line comments
 
-### Language Configuration
+### Editor configuration
 
-- **Bracket Matching**: Automatic matching for `{}`, `()`, and `[]`
-- **Auto-closing Pairs**: Automatic closing of quotes and brackets
-- **Code Folding**: Foldable blocks for `class`, `try`, `given`, `for`, and `if` statements
-- **Word Pattern**: Proper identifier recognition for Lyric variables and functions
+- Bracket matching for `{}`, `()`, `[]`, and Lyric block pairs (`class` / `+++`, `try` / `fade`, `given` / `done`, `for` / `done`, `if` / `end`)
+- Auto-closing quotes and brackets
+- Folding for `class`, `try`, `given`, `for`, `if`, `case`, `else`, `catch`, and `finally` blocks
+- Identifier word pattern for Lyric names
 
-## Installing
+## Installation
 
-### From VSIX
+From the repository root, with Node.js 20 or later:
 
+```bash
+npx @vscode/vsce package
 ```
-npx vsce package
+
+vsce writes `lyric-lang-<version>.vsix` in the repository root. The filename comes from `name` and `version` in `package.json`. With the current manifest that file is `lyric-lang-0.8.5.vsix`.
+
+1. Open the Extensions view (`Ctrl+Shift+X` on Windows and Linux, `Cmd+Shift+X` on macOS).
+2. Open the **Views and More Actions...** menu (`⋮`) at the top of the Extensions view.
+3. Choose **Install from VSIX...** and select the `.vsix` file.
+4. Reload the window if VS Code asks you to.
+
+From a terminal, with the `code` command on your `PATH`:
+
+```bash
+code --install-extension lyric-lang-<version>.vsix
 ```
 
-1. Open VS Code and go to the **Extensions** sidebar (`Ctrl+Shift+X`).
-2. Click the **⋮** menu icon in the top-right corner.
-3. Select **Install from VSIX…** and choose your `.vsix` file.
-4. Reload VS Code if prompted.
-
-### From Source
-
-1. Open the extension folder in VS Code.
-2. Press **F5** to launch an Extension Development Host with the extension loaded.
+To try the extension without packaging, open this folder in VS Code and press **F5**.
 
 ## Requirements
 
-VS Code 1.80.0 or later.
+Visual Studio Code 1.80.0 or later.
 
 ## License
 
-See [LICENSE](LICENSE) for details.
+[MIT](LICENSE)
+
+(c) 2026 MiraNova Studio

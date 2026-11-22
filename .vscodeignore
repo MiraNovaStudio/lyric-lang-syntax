@@ -1,0 +1,16 @@
+.gitignore
+.vscode/**
+.idea/**
+.claude/**
+node_modules/**
+out/**
+dist/**
+*.vsix
+*.log
+.DS_Store
+Thumbs.db
+*.swp
+__pycache__/**
+.pytest_cache/**
+*.pyc
+*.pyo
